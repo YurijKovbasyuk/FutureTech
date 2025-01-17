@@ -296,6 +296,10 @@ svg * {
   }
 }
 
+html.is-lock {
+  overflow: hidden;
+}
+
 body {
   font-size: clamp(0.875rem, 0.8112745098rem + 0.2614379085vw, 1.125rem);
   font-family: var(--font-family-base);
@@ -403,7 +407,7 @@ a[class] {
 }
 
 :focus-visible {
-  outgline: 0.125rem dashed var(--color-light);
+  outline: 0.125rem dashed var(--color-light);
   outline-offset: 0.25rem;
   transition-duration: 0s !important;
 }
@@ -546,8 +550,20 @@ button[aria-label]::before {
   }
 }
 .header__body {
+  animation-name: scrolling-header;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: 0rem 18.75rem;
+  position: sticky;
+  z-index: 100;
+  top: 0;
   padding-block: 1.5rem;
   background-color: var(--color-dark-10);
+}
+@keyframes scrolling-header {
+  to {
+    box-shadow: 0 0 1rem 0 var(--color-dark-40);
+  }
 }
 @media (width <= 47.99875rem) {
   .header__body {
