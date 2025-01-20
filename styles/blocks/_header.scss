@@ -15,9 +15,12 @@
     }
 
     &__body {
+
+        // анімація для розділення шапки і контенту під час скролу
         animation-name: scrolling-header;
         animation-fill-mode: both;
         animation-timeline: scroll();
+        // межі в яких поступово з'являється анмація
         animation-range: rem(0) rem(300);
 
         @keyframes scrolling-header {
