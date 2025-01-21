@@ -3,22 +3,24 @@
 
 @mixin fluid-text($max: 48, $min: 16) {
   font-size: fluid($max, $min);
-  }
+}
 
 @mixin hide {
-    opacity: 0;
-    visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
 }
 
 @mixin show {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 @mixin flex-center($isInline: false) {
   @if $isInline {
     display: inline-flex;
-  } @else  {
+  }
+
+  @else {
     display: flex;
   }
 
@@ -31,6 +33,18 @@
   top: 50%;
   left: 50%;
   translate: -50% -50%;
+}
+
+@mixin abs-x {
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+}
+
+@mixin abs-y {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
 }
 
 @mixin square($size) {
