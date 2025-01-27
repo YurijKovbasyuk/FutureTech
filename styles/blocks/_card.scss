@@ -52,7 +52,7 @@
     }
 
     &__body {
-        // padding-right: 0;
+        padding-right: 0;
 
         @include mobile {
             padding-block: rem(30) rem(16);
