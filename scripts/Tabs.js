@@ -34,8 +34,8 @@ class Tabs {
             const isActive = index === activeTabIndex
 
             buttonElement.classList.toggle(this.stateClasses.isActive, isActive)
-            buttonElement.stateAtributes(this.stateAtributes.ariaSelected, isActive.toString())
-            buttonElement.stateAtributes(this.stateAtributes.tabIndex, isActive ? '0' : '-1')
+            buttonElement.setAttribute(this.stateAtributes.ariaSelected, isActive.toString())
+            buttonElement.setAttribute(this.stateAtributes.tabIndex, isActive ? '0' : '-1')
         })
 
 
